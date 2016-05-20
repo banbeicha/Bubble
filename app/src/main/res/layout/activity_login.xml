@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/login_bg"
+    tools:context="com.wz.bubble.bubble.LoginActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="16dp"
+            android:background="#c0000000"
+            android:orientation="vertical">
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@android:color/white"
+                >
+                <EditText
+                    android:id="@+id/et_login_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/prompt_email"
+                    android:textSize="14sp"
+                    android:inputType="phone"
+                    android:textColor="@android:color/white"
+                    android:maxLength="11" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@android:color/white"
+                >
+                <EditText
+                    android:id="@+id/et_login_pwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/prompt_password"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    android:singleLine="true" />
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/btn_sign_in_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.DeviceDefault.Light.Button.Color.SeaGreen"
+                android:layout_marginTop="16dp"
+                android:text="登    录"
+                android:textSize="12sp"
+                android:textColor="@android:color/white"
+              />
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="忘记密码  |"
+        android:id="@+id/tv_login_foundpwd"
+        android:textColor="@android:color/white"
+       />
+    <TextView
+        android:id="@+id/tv_QQ_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="  QQ登录"
+        android:textColor="@android:color/white"
+        />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@drawable/conversation_options_bg"
+    android:padding="10dp"
+    android:layout_height="match_parent">
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:text="  加好友"
+    android:drawableLeft="@drawable/conversation_options_addmember"
+    android:gravity="center"
+    android:layout_marginBottom="20dp"
+    />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="  扫一扫"
+        android:drawableLeft="@drawable/conversation_options_qr"
+        android:gravity="center"
+        />
+</LinearLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@mipmap/login_bg"
+    tools:context=".FoundPwdActivity">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#c0000000"
+    android:padding="16dp"
+    android:gravity="center"
+    >
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@android:color/white"
+        >
+        <EditText
+            android:id="@+id/et_modify_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="新密码"
+            android:textColor="@android:color/white"
+            android:lines="1"
+            android:inputType="textPassword"
+            android:textSize="14sp" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@android:color/white"
+        >
+        <EditText
+            android:id="@+id/et_modify_pwdok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="确认密码"
+            android:lines="1"
+            android:textColor="@android:color/white"
+            android:inputType="textPassword"
+            android:textSize="14sp" />
+    </android.support.design.widget.TextInputLayout>
+    <Button
+        android:id="@+id/btn_done"
+        style="@style/Widget.DeviceDefault.Light.Button.Color.SeaGreen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="完    成"
+        android:textColor="@android:color/white"
+        android:textSize="12sp" />
+</LinearLayout>
+</LinearLayout>

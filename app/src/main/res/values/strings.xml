@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">气泡</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">手机号</string>
+    <string name="prompt_password">密码</string>
+    <string name="action_sign_in">下一步</string>
+
+
+</resources>

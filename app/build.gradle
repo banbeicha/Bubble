@@ -1,0 +1,42 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '23.0.3'
+
+    defaultConfig {
+        applicationId "com.wz.bubble.bubble"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+repositories{
+    flatDir{
+        dirs 'libs' //就是你放aar的目录地址
+    }
+
+}
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.3.0'
+    compile files('libs/open_sdk_r5509.jar')
+    compile files('libs/classes.jar')
+    compile 'com.android.support:design:23.3.0'
+    compile project(':colortheme-seagreen')
+    compile files('libs/BmobSDK_V3.4.6_0415.jar')
+    compile files('libs/MobCommons-2016.0303.1229.jar')
+    compile files('libs/MobTools-2016.0303.1229.jar')
+    compile name: 'SMSSDK-2.0.2', ext: 'aar'
+    compile 'com.androidadvance:topsnackbar:0.0.8'
+    compile project(':IMKitWithVoIP')
+    compile files('libs/AMap2DMap_2.8.1_AMapLocation_2.4.1_20160425.jar')
+}

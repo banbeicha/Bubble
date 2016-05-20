@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.wz.bubble.bubble.ConversationListActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:orientation="horizontal"
+        android:background="@color/mz_theme_color_seagreen"
+        >
+    <io.rong.imkit.widget.AsyncImageView
+        android:id="@+id/aiv_ConversationList_headpic"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:scaleType="centerCrop"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:RCShape="circle"
+        android:layout_gravity="center_vertical"
+        />
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:layout_weight="1"
+            >
+            <RadioButton
+               style="@style/MyRadioStyle"
+                android:checked="true"
+                android:drawableLeft="@drawable/message_radiobackground" />
+            <RadioButton
+                style="@style/MyRadioStyle"
+                android:drawableLeft="@drawable/online_radiobackground"
+                />
+            <RadioButton
+                style="@style/MyRadioStyle"
+                android:drawableLeft="@drawable/friend_radiobackground"
+              />
+        </RadioGroup>
+        <RadioButton
+            style="@style/MyRadioStyle"
+            android:drawableLeft="@drawable/setting_radiobackground"
+            android:checked="false"
+            android:id="@+id/rbt_more"
+            android:layout_marginRight="10dp"
+            />
+    </LinearLayout>
+    <fragment
+        android:id="@+id/conversationlist"
+        android:name="io.rong.imkit.fragment.ConversationListFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>
