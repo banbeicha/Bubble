@@ -38,5 +38,5 @@ dependencies {
     compile name: 'SMSSDK-2.0.2', ext: 'aar'
     compile 'com.androidadvance:topsnackbar:0.0.8'
     compile project(':IMKitWithVoIP')
-    compile files('libs/AMap2DMap_2.8.1_AMapLocation_2.4.1_20160425.jar')
+
 }

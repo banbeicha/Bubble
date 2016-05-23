@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.wz.bubble.bubble.Message.SendAddFriend;
+import com.wz.bubble.bubble.Provider.SendAddFriendItem;
 import com.wz.bubble.bubble.data.UserInfoData;
 import com.wz.bubble.bubble.model.User;
 
@@ -14,6 +16,9 @@ import org.xutils.x;
 
 import cn.bmob.v3.BmobObject;
 import cn.bmob.v3.BmobUser;
+import io.rong.imkit.RongIM;
+import io.rong.imlib.RongIMClient;
+import io.rong.imlib.model.Conversation;
 import io.rong.imlib.model.UserInfo;
 
 public class MainActivity extends AppCompatActivity {
@@ -22,8 +27,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        RongIM.getInstance().registerMessageTemplate(new SendAddFriendItem());
         SharedPreferences sharedPreferences=getSharedPreferences("RY_USERINFO",MODE_PRIVATE);
-       name= sharedPreferences.getString("name","");
+        name= sharedPreferences.getString("name","");
         if(!"".equals(name)){
             MyApp.TX_NAME=name;
             MyApp.TX_ID=sharedPreferences.getString("userid","");

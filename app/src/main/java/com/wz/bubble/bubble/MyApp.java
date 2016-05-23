@@ -1,16 +1,11 @@
 package com.wz.bubble.bubble;
-
 import android.app.ActivityManager;
 import android.app.Application;
 import android.content.Context;
-
 import org.xutils.x;
-
 import cn.bmob.v3.Bmob;
 import cn.smssdk.SMSSDK;
 import io.rong.imkit.RongIM;
-
-
 /**
  * Created by BANBEICHAS on 2016/5/5.
  */

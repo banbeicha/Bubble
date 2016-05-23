@@ -8,6 +8,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
 
+import com.wz.bubble.bubble.Message.SendAddFriend;
 import com.wz.bubble.bubble.MyApp;
 import com.wz.bubble.bubble.lister.xCallback;
 import com.wz.bubble.bubble.util.SHA1Utils;
@@ -64,8 +65,7 @@ public class UserInfoData {
 
             @Override
             public void onSuccess(String s) {
-
-
+                RongIM.registerMessageType(SendAddFriend.class);
                 if (RongIM.getInstance() != null) {
                     RongIM.setUserInfoProvider(new RongIM.UserInfoProvider() {
                         @Override
